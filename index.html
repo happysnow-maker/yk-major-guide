@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>전공선택 자료실 | 한양YK인터칼리지</title>
+<meta name="description" content="2026학년도 한양YK인터칼리지 전공선택 퀵가이드북과 주전공·다전공 신청 매뉴얼">
+<style>
+  :root{--navy:#0B2D5B;--navy-deep:#061A36;--coral:#C8431C;--peach:#F2B49B;--ink:#E8EDF5;--muted:#9FB0C8;--shelf:#6B4A2E}
+  *{box-sizing:border-box}
+  body{
+    margin:0;min-height:100dvh;color:var(--ink);
+    background:radial-gradient(ellipse at 50% 20%,#123B70 0%,var(--navy-deep) 72%) fixed;
+    font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic','맑은 고딕',sans-serif;
+    display:flex;flex-direction:column;align-items:center;
+  }
+  header{text-align:center;padding:56px 16px 8px}
+  header small{font-size:11px;letter-spacing:3px;color:var(--peach);font-weight:700}
+  header h1{margin:10px 0 8px;font-size:clamp(24px,5vw,34px);font-weight:800;line-height:1.3}
+  header p{margin:0;color:var(--muted);font-size:15px}
+  .period{display:inline-block;margin-top:18px;padding:8px 16px;border-radius:999px;background:rgba(200,67,28,.15);border:1px solid rgba(242,180,155,.4);font-size:14px}
+  .period b{color:var(--peach)}
+
+  .shelf{position:relative;width:100%;max-width:880px;padding:56px 16px 0;display:flex;justify-content:center;gap:clamp(28px,8vw,96px);flex-wrap:wrap}
+  .book{display:block;text-decoration:none;color:inherit;width:220px;text-align:center}
+  .book .obj{position:relative;height:300px;perspective:1200px;display:flex;align-items:flex-end;justify-content:center}
+  .book .cover{
+    position:relative;transform-style:preserve-3d;transform:rotateY(-22deg);transition:transform .45s ease;
+    box-shadow:14px 18px 30px rgba(0,0,0,.45);border-radius:2px 5px 5px 2px;
+  }
+  .book .cover img{display:block;max-height:290px;max-width:220px;border-radius:2px 5px 5px 2px}
+  /* 책등 */
+  .book .cover::before{content:"";position:absolute;left:0;top:0;bottom:0;width:14px;transform:translateX(-14px) rotateY(-90deg);transform-origin:right;background:linear-gradient(90deg,#03122a,#0B2D5B)}
+  /* 종이 단면 */
+  .book .cover::after{content:"";position:absolute;right:0;top:4px;bottom:4px;width:16px;transform:translateX(16px) rotateY(90deg);transform-origin:left;background:repeating-linear-gradient(90deg,#fff 0 2px,#e6dfd1 2px 3px)}
+  .book.manual .cover::before{background:linear-gradient(90deg,#5c1c0a,#B23A17)}
+  /* 매뉴얼 원본 표지는 가로형이라 세로 책 표지를 CSS로 그립니다 */
+  .css-cover{width:206px;height:290px;padding:24px 18px;text-align:left;background:#B23A17;color:#fff;border-radius:2px 5px 5px 2px;display:flex;flex-direction:column}
+  .css-cover .en{font-size:9px;letter-spacing:2px;color:#FFD9C7;font-weight:700}
+  .css-cover .yr{margin-top:18px;font-size:12px;color:#FBE3D8}
+  .css-cover .tt{margin-top:4px;font-size:23px;line-height:1.3;font-weight:800}
+  .css-cover .tt span{color:#FFE2B8}
+  .css-cover .rule{width:32px;height:3px;background:#fff;margin:14px 0}
+  .css-cover .toc{font-size:12px;line-height:1.9;color:#FDEDE5}
+  .css-cover .ft{margin-top:auto;font-size:9px;letter-spacing:1px;color:#F4B9A2}
+  .book:hover .cover,.book:focus-visible .cover{transform:rotateY(-6deg) translateY(-6px)}
+  .book h2{margin:26px 0 4px;font-size:18px}
+  .book p{margin:0;font-size:13px;color:var(--muted);line-height:1.6}
+  .book .open{display:inline-block;margin-top:14px;padding:9px 20px;border-radius:999px;background:#fff;color:var(--navy);font-weight:700;font-size:14px}
+  .book.manual .open{background:var(--coral);color:#fff}
+  .plank{position:absolute;left:16px;right:16px;top:352px;height:16px;z-index:-1;background:linear-gradient(#8a6440,var(--shelf));border-radius:3px;box-shadow:0 14px 24px rgba(0,0,0,.4);pointer-events:none}
+
+  footer{margin-top:auto;padding:40px 16px 28px;text-align:center;font-size:13px;color:var(--muted);line-height:1.8}
+  footer a{color:var(--ink)}
+  @media (max-width:560px){
+    .plank{display:none}
+    .shelf{padding-top:36px;gap:48px}
+  }
+</style>
+</head>
+<body>
+  <header>
+    <small>HANYANG YK INTERCOLLEGE · 2026</small>
+    <h1>전공선택 자료실</h1>
+    <p>읽고 싶은 책을 눌러 펼쳐 보세요.</p>
+    <div class="period">주전공·다전공 신청 <b>2026. 11. 2.(월) ~ 11. 6.(금) 17:00</b></div>
+  </header>
+
+  <section class="shelf">
+    <a class="book guide" href="guide.html">
+      <div class="obj"><div class="cover"><img src="books/guide/cover-thumb.jpg" alt="전공선택 통합 퀵가이드 표지"></div></div>
+      <h2>전공선택 통합 퀵가이드북</h2>
+      <p>주전공·다전공 이수요건, 졸업요건,<br>선택 가능 학부(과)</p>
+      <span class="open">펼쳐보기</span>
+    </a>
+    <a class="book manual" href="manual.html">
+      <div class="obj"><div class="cover"><div class="css-cover" role="img" aria-label="주전공·다전공 신청 매뉴얼 표지">
+        <span class="en">MAJOR APPLICATION MANUAL</span>
+        <span class="yr">2026학년도 · 학생용</span>
+        <span class="tt">주전공·다전공<br><span>신청 매뉴얼</span></span>
+        <span class="rule"></span>
+        <span class="toc">01&nbsp; 신청 전 확인<br>02&nbsp; 최초 신청<br>03&nbsp; 변경·승인</span>
+        <span class="ft">Hanyang YK Intercollege</span>
+      </div></div></div>
+      <h2>주전공·다전공 신청 매뉴얼</h2>
+      <p>HY-in 포털 신청·변경 화면<br>단계별 안내</p>
+      <span class="open">펼쳐보기</span>
+    </a>
+    <div class="plank"></div>
+  </section>
+
+  <footer>
+    전공 신청 행정 문의 <a href="mailto:intercollege@hanyang.ac.kr">intercollege@hanyang.ac.kr</a><br>
+    전공 상담 <a href="mailto:lifedesign@hanyang.ac.kr">lifedesign@hanyang.ac.kr</a><br>
+    한양YK인터칼리지 행정팀
+  </footer>
+</body>
+</html>
